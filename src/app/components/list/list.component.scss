@@ -1,0 +1,53 @@
+fa-icon {
+    color: rgb(22, 186, 80);
+    cursor: pointer;
+    
+  }
+  fa-icon:hover {
+    color: rgb(211, 31, 31);
+  }
+  .items{
+    background-color: rgb(255, 255, 255);
+    margin:20px ;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.311);
+    width: 500px;
+    border-radius: 3px;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .title{
+    text-align: center;
+    font-size:xx-large;
+    font-weight:500;
+    padding-bottom: 10px;
+  }
+  .item{
+    cursor: pointer;
+  }
+  .end-button {
+    background-color: #005f7f;
+    border: none;
+    padding: 8px 13px 8px 13px;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .15s ease;
+  }
+  .end-button:hover{
+    background-color: #004a63;
+  }
+  .end-button:active{
+    background-color: #007aa3;
+  }
+  .red{
+    background-color: red
+  }
+  .green{
+    background-color: rgb(175, 255, 188);
+  }

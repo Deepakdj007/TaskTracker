@@ -1,0 +1,21 @@
+<div class="container">
+    <mat-list>
+        <div mat-subheader class="title">Tasks</div>
+            <mat-list-item *ngFor="let task of tasks " class="items" >
+                    <mat-icon matListItemIcon>      
+                        <fa-icon [icon]="faThumbtack" (click)="unPin(task.id)"  matTooltip="Unpin" ></fa-icon>
+                    </mat-icon>
+                    <div *ngIf="!isEmpty; else doNotDisplay" class="item" (click)="openDialog(task)" matTooltip="Click to see details" matTooltipPosition='below'>
+                            <div matListItemTitle>{{task.taskName}}</div>
+                            <div matListItemLine>{{task.date | date:'medium'}}</div>
+                    </div>
+                    <ng-template #doNotDisplay>
+                        <p>No Tasks!</p> 
+                    </ng-template>
+                    <button class="end-button" (click)="editItem(task)">
+                        Edit
+                      </button> 
+          </mat-list-item>
+    </mat-list>
+</div>
+

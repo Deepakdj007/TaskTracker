@@ -1,0 +1,34 @@
+<h2 mat-dialog-title>Add Task</h2>
+<br>
+<mat-dialog-content class="mat-typography">
+    <div class="container">
+        <form [formGroup]="itemForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Task Name</mat-label>
+                <input matInput placeholder="Task 1"  required formControlName="taskName">
+                <mat-error ></mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                  <mat-label>Date</mat-label>
+                  <input readonly matInput placeholder="{{date | date:'medium'}}" formControlName="date">
+                  <mat-error ></mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Enter Task Description</mat-label>
+                  <textarea matInput required formControlName="description"></textarea>
+                  <mat-error ></mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Due date</mat-label>
+                  <input matInput formControlName="dueDate" [matDatepicker]="picker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                  <mat-error ></mat-error>
+                </mat-form-field>
+        </form>
+      </div>
+</mat-dialog-content>
+<mat-dialog-actions align ="end" class="form">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button mat-raised-button color="primary" (click)="addOrEditProduct()">{{action}}</button>
+</mat-dialog-actions>

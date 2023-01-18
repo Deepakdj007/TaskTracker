@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" class="bg-color">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" routerLink="/">
+      <fa-icon [icon]="faTasks"></fa-icon>
+    </button>
+    <span>Task Tracker</span>
+    <span class="example-spacer"></span>
+    <button  (click)="addNewTask()" class="btn btn-danger" aria-label="Example icon-button with share icon">
+    New task +
+    </button>
+  </mat-toolbar>
+<app-list [events]="eventsSubject.asObservable()"></app-list>

@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Task</h2>
+<mat-dialog-content class="mat-typography">
+  <div>
+    <p [contentEditable]="true" #descriptionText>{{data.description}}</p>
+    <h5> 
+        <b [contentEditable]="false" class="due-date">Due date: </b> 
+        <span #newDewDate [contentEditable]="true">{{data.dueDate}}</span>
+    </h5>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="onSave()">Save</button>
+</mat-dialog-actions>
